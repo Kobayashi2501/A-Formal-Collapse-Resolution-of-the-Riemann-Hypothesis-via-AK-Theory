@@ -465,14 +465,18 @@ no torsion or obstruction can remain unaccounted for globally. Thus, $\Sha(\zeta
 
 To conclude the collapse sequence, we summarize the flow of structural contraction as follows:
 
-\[
-\begin{tikzcd}[column sep=large]
-\mathcal{M}_\zeta \arrow[r, "\mathrm{PH}_1 = 0"] 
-    & \mathcal{Z}_\zeta \arrow[r, "\mathrm{Ext}^1 = 0"] 
-    & \mathcal{T}(\mathcal{Z}_\zeta) \arrow[r, "\Sha(\zeta) = 0"] 
-    & \mathcal{L}_c
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=2.5em, column sep=4em, text height=1.5ex, text depth=0.25ex]
+  {
+    \mathcal{M}_\zeta & \mathcal{Z}_\zeta & \mathcal{T}(\mathcal{Z}_\zeta) & \mathcal{L}_c \\
+  };
+  \path[->] (m-1-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-1-2);
+  \path[->] (m-1-2) edge node[above] {$\mathrm{Ext}^1 = 0$} (m-1-3);
+  \path[->] (m-1-3) edge node[above] {$\Sha(\zeta) = 0$} (m-1-4);
+\end{tikzpicture}
+\end{center}
+
 
 Here:
 
@@ -527,14 +531,18 @@ This framework satisfies all axioms of AK Collapse Theory:
 
 We now present the complete causal diagram of the collapse derivation:
 
-\[
-\begin{tikzcd}[column sep=large]
-\mathcal{M}_\zeta \arrow[r, "\mathrm{PH}_1 = 0"] 
-  & \mathcal{Z}_\zeta \arrow[r, "\mathrm{Ext}^1 = 0"] 
-  & \mathcal{T}(\mathcal{Z}_\zeta) \arrow[r, "\Sha(\zeta) = 0"] 
-  & \mathcal{L}_c
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=2.5em, column sep=4em, text height=1.5ex, text depth=0.25ex]
+  {
+    \mathcal{M}_\zeta & \mathcal{Z}_\zeta & \mathcal{T}(\mathcal{Z}_\zeta) & \mathcal{L}_c \\
+  };
+  \path[->] (m-1-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-1-2);
+  \path[->] (m-1-2) edge node[above] {$\mathrm{Ext}^1 = 0$} (m-1-3);
+  \path[->] (m-1-3) edge node[above] {$\Sha(\zeta) = 0$} (m-1-4);
+\end{tikzpicture}
+\end{center}
+
 
 This sequence demonstrates that all structural features—topological, algebraic, and obstruction-theoretic—are functorially and temporally collapsed  
 into a one-dimensional axis $\mathcal{L}_c = \{ s \in \mathbb{C} \mid \Re(s) = \tfrac{1}{2} \}$.
@@ -707,12 +715,20 @@ We postulate the following ten axioms (A0–A9), governing the behavior of colla
     \]
 
     \item \textbf{A5 (Causal Collapse Coherence):} For all morphisms $f: X \rightarrow Y$ in $\mathcal{C}$, the following diagram commutes:
-    \[
-    \begin{tikzcd}
-    X \arrow[r, "\tau_X"] \arrow[d, "f"'] & \mathcal{T}(X) \arrow[d, "\mathcal{T}(f)"] \\
-    Y \arrow[r, "\tau_Y"] & \mathcal{T}(Y)
-    \end{tikzcd}
-    \]
+　　\begin{center}
+　　\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+ 　　 \matrix (m) [matrix of math nodes, row sep=4em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
+ 　　 {
+ 　　   X & \mathcal{T}(X) \\
+ 　　   Y & \mathcal{T}(Y) \\
+　　  };
+　　  \path[->] (m-1-1) edge node[above] {$\tau_X$} (m-1-2);
+　　  \path[->] (m-1-1) edge node[left]  {$f$} (m-2-1);
+　　  \path[->] (m-1-2) edge node[right] {$\mathcal{T}(f)$} (m-2-2);
+　　  \path[->] (m-2-1) edge node[below] {$\tau_Y$} (m-2-2);
+　　\end{tikzpicture}
+　　\end{center}
+
 
     \item \textbf{A6 (Directional Constraint):} The collapse functor $\mathcal{T}$ is time-oriented and irreversible;  
     i.e., $\mathcal{T}(\mathcal{T}(X)) \cong \mathcal{T}(X)$ but not generally $\mathcal{T}^{-1}(X)$.
@@ -1003,12 +1019,21 @@ For each object $X \in \mathcal{C}$, define a morphism:
 called the \emph{collapse morphism}, satisfying the following:
 \begin{itemize}
     \item (Functoriality) For every morphism $f : X \to Y$, the diagram commutes:
-    \[
-    \begin{tikzcd}
-    X \arrow[r, "\tau_X"] \arrow[d, "f"'] & \mathcal{T}(X) \arrow[d, "\mathcal{T}(f)"] \\
-    Y \arrow[r, "\tau_Y"] & \mathcal{T}(Y)
-    \end{tikzcd}
-    \]
+    
+　　\begin{center}
+　　\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+　　  \matrix (m) [matrix of math nodes, row sep=4em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
+　　  {
+　　    X & \mathcal{T}(X) \\
+　　    Y & \mathcal{T}(Y) \\
+　　  };
+　　  \path[->] (m-1-1) edge node[above] {$\tau_X$} (m-1-2);
+　　  \path[->] (m-1-1) edge node[left]  {$f$} (m-2-1);
+　　  \path[->] (m-1-2) edge node[right] {$\mathcal{T}(f)$} (m-2-2);
+　　  \path[->] (m-2-1) edge node[below] {$\tau_Y$} (m-2-2);
+　　\end{tikzpicture}
+　　\end{center}
+
     \item (Fixed-point collapse) $\mathcal{T}(\mathcal{T}(X)) \cong \mathcal{T}(X)$
     \item (Irreversibility) There does not exist a natural inverse functor $\mathcal{T}^{-1}$.
 \end{itemize}
@@ -1066,14 +1091,22 @@ Hence, $\Sha(X)$ vanishes functorially.
 \subsection*{E.4 Collapse Diagram with Causal Flow}
 
 We summarize the full temporal collapse chain as follows:
-\[
-\begin{tikzcd}[column sep=huge]
-\mathcal{M}_\zeta \arrow[r, "\tau^{\lambda_1}"] \arrow[rr, bend left=20, "\tau^{\lambda_2}"] \arrow[rrr, bend left=35, "\tau^{\infty} = \tau_{\mathcal{M}_\zeta}"] 
-& \mathcal{Z}_{\zeta, \lambda_1} \arrow[r] 
-& \mathcal{Z}_{\zeta, \lambda_2} \arrow[r] 
-& \mathcal{T}(\mathcal{Z}_\zeta) \cong \mathcal{L}_c
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=3.5em, column sep=5em, text height=1.5ex, text depth=0.25ex]
+  {
+    \mathcal{M}_\zeta & \mathcal{Z}_{\zeta, \lambda_1} & \mathcal{Z}_{\zeta, \lambda_2} & \mathcal{T}(\mathcal{Z}_\zeta) \cong \mathcal{L}_c \\
+  };
+  % Straight arrows
+  \path[->] (m-1-1) edge node[above] {$\tau^{\lambda_1}$} (m-1-2);
+  \path[->] (m-1-2) edge (m-1-3);
+  \path[->] (m-1-3) edge (m-1-4);
+  % Curved arrows
+  \path[->, bend left=20] (m-1-1) edge node[above] {$\tau^{\lambda_2}$} (m-1-3);
+  \path[->, bend left=35] (m-1-1) edge node[above] {$\tau^{\infty} = \tau_{\mathcal{M}_\zeta}$} (m-1-4);
+\end{tikzpicture}
+\end{center}
+
 
 Each morphism in this diagram represents a partial structural collapse, with the final collapse target being the critical line.
 
@@ -1106,16 +1139,27 @@ Each of these layers is progressively trivialized via a time-oriented collapse f
 
 We now construct the commutative diagram encoding the collapse progression:
 
-\[
-\begin{tikzcd}[row sep=large, column sep=huge]
-\mathcal{M}_\zeta \arrow[r, "\mathrm{PH}_1 = 0"] \arrow[dr, swap, "\tau_{\mathcal{M}}" near start] 
-  & \mathcal{Z}_\zeta \arrow[r, "\mathrm{Ext}^1 = 0"] \arrow[d, "\tau_{\mathcal{Z}}" near start]
-  & \mathcal{T}(\mathcal{Z}_\zeta) \arrow[r, "\Sha(\zeta) = 0"] \arrow[dl, swap, "\tau_{\mathcal{T}}" near end]
-  & \mathcal{L}_c \\
-& \mathcal{T}(\mathcal{M}_\zeta) \arrow[r, dashed, "\cong"]
-& \mathcal{L}_c \arrow[ur, equals]
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=5em, column sep=6em, text height=1.5ex, text depth=0.25ex]
+  {
+    \mathcal{M}_\zeta & \mathcal{Z}_\zeta & \mathcal{T}(\mathcal{Z}_\zeta) & \mathcal{L}_c \\
+    {} & \mathcal{T}(\mathcal{M}_\zeta) & \mathcal{L}_c & {} \\
+  };
+  % 上段水平方向
+  \path[->] (m-1-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-1-2);
+  \path[->] (m-1-2) edge node[above] {$\mathrm{Ext}^1 = 0$} (m-1-3);
+  \path[->] (m-1-3) edge node[above] {$\Sha(\zeta) = 0$} (m-1-4);
+  % 斜め collapse 矢印群
+  \path[->] (m-1-1) edge[bend right=15] node[swap, near start] {$\tau_{\mathcal{M}}$} (m-2-2);
+  \path[->] (m-1-2) edge node[near start] {$\tau_{\mathcal{Z}}$} (m-2-2);
+  \path[->] (m-1-3) edge[bend left=15] node[swap, near end] {$\tau_{\mathcal{T}}$} (m-2-3);
+  % 下段 collapse & identity
+  \path[->, dashed] (m-2-2) edge node[below] {$\cong$} (m-2-3);
+  \path[->] (m-2-3) edge node[right] {$=$} (m-1-4);
+\end{tikzpicture}
+\end{center}
+
 
 \begin{description}
     \item[$\tau_{\mathcal{M}}$:] Collapse morphism on the topological moduli space (Appendix B–C)
@@ -1223,14 +1267,27 @@ Therefore, the proof logically terminates under the Collapse Theory.
 
 \subsection*{G.5 Summary Diagram of Logical Layers}
 
-\[
-\begin{tikzcd}[column sep=large]
-\text{Axioms (A0–A9)} \arrow[d] \\
-\text{Collapse Definitions} \arrow[d] \\
-\text{Persistent Homology} \arrow[r, "\text{PH}_1 = 0"] & \text{Ext Layer} \arrow[r, "\text{Ext}^1 = 0"] & \text{Obstruction} \arrow[r, "\Sha = 0"] & \mathcal{L}_c \\
-\text{Proof Completed} \arrow[uu, dashed, bend right=40, "QED" left]
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=3.8em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
+  {
+    \text{Axioms (A0--A9)} & & & \\
+    \text{Collapse Definitions} & & & \\
+    \text{Persistent Homology} & \text{Ext Layer} & \text{Obstruction} & \mathcal{L}_c \\
+    \text{Proof Completed} & & & \\
+  };
+  % Vertical chain
+  \path[->] (m-1-1) edge (m-2-1);
+  \path[->] (m-2-1) edge (m-3-1);
+  % Horizontal flow
+  \path[->] (m-3-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-3-2);
+  \path[->] (m-3-2) edge node[above] {$\mathrm{Ext}^1 = 0$} (m-3-3);
+  \path[->] (m-3-3) edge node[above] {$\Sha = 0$} (m-3-4);
+  % Final QED loop back
+  \path[->, dashed, bend right=40] (m-4-1) edge node[left] {QED} (m-1-1);
+\end{tikzpicture}
+\end{center}
+
 
 This diagram shows that the entire argument is not only logically sequential,  
 but functorially embedded in a collapse-governed formal environment.
@@ -1252,13 +1309,16 @@ We also clarify the common collapse mechanisms in terms of motive-theoretic inte
 
 The BSD Collapse theorem (see companion work) follows a structurally similar progression:
 
-\[
-\begin{tikzcd}
-\text{Moduli of } E(\QQ) \arrow[r, "\mathrm{PH}_1 = 0"]
-& \mathrm{Ext}^1(\mathbb{Z}, \mathcal{E}) \arrow[r, "\Sha(E) = 0"]
-& \text{Rank formula collapse}
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=3em, column sep=5em, text height=1.5ex, text depth=0.25ex]
+  {
+    \text{Moduli of } E(\mathbb{Q}) & \mathrm{Ext}^1(\mathbb{Z}, \mathcal{E}) & \text{Rank formula collapse} \\
+  };
+  \path[->] (m-1-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-1-2);
+  \path[->] (m-1-2) edge node[above] {$\Sha(E) = 0$} (m-1-3);
+\end{tikzpicture}
+\end{center}
 
 Here:
 - $\mathcal{E}$ is the sheaf associated to the rational points on an elliptic curve.
@@ -1269,19 +1329,29 @@ Here:
 
 Let us formalize the diagrammatic analogy between BSD and Riemann cases:
 
-\[
-\begin{tikzcd}[column sep=huge]
-\mathcal{M}_{\text{BSD}} \arrow[r, "\mathrm{PH}_1 = 0"]
-  & \mathcal{E} \arrow[r, "\mathrm{Ext}^1 = 0"]
-  & \Sha(E) = 0 \arrow[r] 
-  & \text{Rank}(E) = \operatorname{ord}_{s=1} L(E,s) \\
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=5em, column sep=6em, text height=1.5ex, text depth=0.25ex]
+  {
+    \mathcal{M}_{\text{BSD}} & \mathcal{E} & \Sha(E) = 0 & \text{Rank}(E) = \operatorname{ord}_{s=1} L(E,s) \\
+    \mathcal{M}_\zeta & \mathcal{Z}_\zeta & \Sha(\zeta) = 0 & \Re(z) = \tfrac{1}{2} \\
+  };
+  % 上段 Collapse 矢印
+  \path[->] (m-1-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-1-2);
+  \path[->] (m-1-2) edge node[above] {$\mathrm{Ext}^1 = 0$} (m-1-3);
+  \path[->] (m-1-3) edge (m-1-4);
+  % 下段 Collapse 矢印
+  \path[->] (m-2-1) edge node[below] {$\mathrm{PH}_1 = 0$} (m-2-2);
+  \path[->] (m-2-2) edge node[below] {$\mathrm{Ext}^1 = 0$} (m-2-3);
+  \path[->] (m-2-3) edge (m-2-4);
+  % 垂直 dash 対応 Collapse
+  \path[dashed, ->] (m-2-1) edge (m-1-1);
+  \path[dashed, ->] (m-2-2) edge (m-1-2);
+  \path[dashed, ->] (m-2-3) edge (m-1-3);
+  \path[dashed, ->] (m-2-4) edge (m-1-4);
+\end{tikzpicture}
+\end{center}
 
-\mathcal{M}_\zeta \arrow[r, "\mathrm{PH}_1 = 0"] \arrow[u, dashrightarrow]
-  & \mathcal{Z}_\zeta \arrow[r, "\mathrm{Ext}^1 = 0"] \arrow[u, dashrightarrow]
-  & \Sha(\zeta) = 0 \arrow[r] \arrow[u, dashrightarrow]
-  & \Re(z) = \tfrac{1}{2} \arrow[u, dashrightarrow]
-\end{tikzcd}
-\]
 
 The vertical dashed arrows represent structural analogy via the AK Collapse functor.  
 In both cases, the collapse proceeds via the vanishing of:
@@ -1640,26 +1710,49 @@ It is intended as a reference for the structural hierarchy, functorial flows, an
 \subsection*{R.1 Key Figures and Diagrams}
 
 \paragraph{Figure 1. Zeta Collapse Diagram (See Appendix F)}
-\[
-\begin{tikzcd}[column sep=huge, row sep=large]
-\mathcal{M}_\zeta \arrow[r, "\mathrm{PH}_1 = 0"] \arrow[dr, swap, "\tau_{\mathcal{M}}" near start]
-  & \mathcal{Z}_\zeta \arrow[r, "\mathrm{Ext}^1 = 0"] \arrow[d, "\tau_{\mathcal{Z}}" near start]
-  & \mathcal{T}(\mathcal{Z}_\zeta) \arrow[r, "\Sha(\zeta) = 0"] \arrow[dl, swap, "\tau_{\mathcal{T}}" near end]
-  & \mathcal{L}_c \\
-& \mathcal{T}(\mathcal{M}_\zeta) \arrow[r, dashed, "\cong"]
-& \mathcal{L}_c \arrow[ur, equals]
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=5em, column sep=6em, text height=1.5ex, text depth=0.25ex]
+  {
+    \mathcal{M}_\zeta & \mathcal{Z}_\zeta & \mathcal{T}(\mathcal{Z}_\zeta) & \mathcal{L}_c \\
+    {} & \mathcal{T}(\mathcal{M}_\zeta) & \mathcal{L}_c & {} \\
+  };
+  % 上段 Collapse 矢印
+  \path[->] (m-1-1) edge node[above] {$\mathrm{PH}_1 = 0$} (m-1-2);
+  \path[->] (m-1-2) edge node[above] {$\mathrm{Ext}^1 = 0$} (m-1-3);
+  \path[->] (m-1-3) edge node[above] {$\Sha(\zeta) = 0$} (m-1-4);
+  % Collapse 関手の斜め矢印
+  \path[->] (m-1-1) edge[bend right=15] node[swap, near start] {$\tau_{\mathcal{M}}$} (m-2-2);
+  \path[->] (m-1-2) edge node[near start] {$\tau_{\mathcal{Z}}$} (m-2-2);
+  \path[->] (m-1-3) edge[bend left=15] node[swap, near end] {$\tau_{\mathcal{T}}$} (m-2-3);
+  % Collapse completion
+  \path[->, dashed] (m-2-2) edge node[below] {$\cong$} (m-2-3);
+  \path[->] (m-2-3) edge node[right] {$=$} (m-1-4);
+\end{tikzpicture}
+\end{center}
+
 
 \paragraph{Figure 2. Collapse Logical Flow (See Appendix G)}
-\[
-\begin{tikzcd}[column sep=large]
-\text{Axioms (A0–A9)} \arrow[d] \\
-\text{Collapse Structures} \arrow[d] \\
-\mathrm{PH}_1 = 0 \arrow[r] & \mathrm{Ext}^1 = 0 \arrow[r] & \Sha = 0 \arrow[r] & \mathcal{L}_c \\
-\text{Collapse Complete (QED)} \arrow[uu, dashed, bend right=40]
-\end{tikzcd}
-\]
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=4.5em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
+  {
+    \text{Axioms (A0--A9)} & & & \\
+    \text{Collapse Structures} & & & \\
+    \mathrm{PH}_1 = 0 & \mathrm{Ext}^1 = 0 & \Sha = 0 & \mathcal{L}_c \\
+    \text{Collapse Complete (QED)} & & & \\
+  };
+  % Vertical causal arrows
+  \path[->] (m-1-1) edge (m-2-1);
+  \path[->] (m-2-1) edge (m-3-1);
+  % Horizontal structural flow
+  \path[->] (m-3-1) edge (m-3-2);
+  \path[->] (m-3-2) edge (m-3-3);
+  \path[->] (m-3-3) edge (m-3-4);
+  % Final reverse causal QED loop
+  \path[->, dashed, bend right=40] (m-4-1) edge (m-1-1);
+\end{tikzpicture}
+\end{center}
 
 \paragraph{Figure 3. Mirror Collapse Correspondence (See Appendix J)}
 \[
