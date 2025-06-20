@@ -15,10 +15,26 @@
 \usepackage{stmaryrd}  % for \llbracket etc.
 \usepackage{bm}        % bold math
 \usepackage{tikz}
-\usetikzlibrary{matrix, arrows.meta, calc, decorations.pathmorphing}
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{placeins}  % float制御用
 
 % === Code, Listings, Diagrams ===
 \usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{Coq}{
+  keywords={Definition,Theorem,Proof,Qed,Fixpoint,match,with,end,fun,let,in,forall,exists,Inductive,return,Type},
+  keywordstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  comment=[l]{//},
+  commentstyle=\color{gray},
+  morecomment=[s]{(*}{*)},
+  string=[b]",
+  stringstyle=\color{red},
+}
+
 \lstset{
   language=Coq,
   basicstyle=\ttfamily\footnotesize,
@@ -28,6 +44,7 @@
   frame=single,
   captionpos=b
 }
+
 
 % === Graphics and Layout ===
 \usepackage{graphicx}
@@ -81,10 +98,12 @@
 \newcommand{\cD}{\mathcal{D}}
 \newcommand{\cH}{\mathcal{H}}
 
+
 \newcommand{\into}{\hookrightarrow}
 \newcommand{\onto}{\twoheadrightarrow}
 \newcommand{\eps}{\varepsilon}
-\newcommand{\Sha}{\text{\textcyr{Sh}}}
+\newcommand{\Sha}{\mathcal{X}}
+\newtheorem{conjecture}{Conjecture}[section]
 
 % === Document Starts ===
 \begin{document}
@@ -94,9 +113,9 @@
 \newpage
 
 
+% ---- Main content follows ----
 
 \section{Chapter 1: Introduction and Overview of the Riemann Hypothesis}
-
 \subsection{1.1 What is the Riemann Hypothesis?}
 
 The \emph{Riemann Hypothesis} (RH) is one of the most celebrated and longstanding open problems in mathematics.  
@@ -150,7 +169,13 @@ and to apply a sequence of collapse operations—persistent homology collapse, E
 Formally, we show that under AK Collapse Axioms:
 
 \[
-\mathrm{PH}_1(\mathcal{M}_\zeta) = 0 \quad \Rightarrow \quad \mathrm{Ext}^1(\mathbb{Z}, \mathcal{Z}_\zeta) = 0 \quad \Rightarrow \quad \Sha(\zeta) = 0 \quad \Rightarrow \quad \text{All zeros lie on } \Re(s) = \tfrac{1}{2}.
+\mathrm{PH}_1(\mathcal{M}_\zeta) = 0 
+\quad \Rightarrow \quad 
+\mathrm{Ext}^1(\mathbb{Z}, \mathcal{Z}_\zeta) = 0 
+\quad \Rightarrow \quad 
+\Sha(\zeta) = 0 
+\quad \Rightarrow \quad 
+\text{All zeros lie on } \, \Re(s) = \tfrac{1}{2}.
 \]
 
 This constitutes a \emph{causally closed formal proof} of RH, via collapse-theoretic confinement of all singularities to the critical line.
@@ -341,7 +366,8 @@ but also stable under perturbations, ensuring a structurally enforced RH conditi
 
 \section{Chapter 4: Extensional Structures and Motific Flatness}
 
-\subsection{4.1 Construction of the Ext Layer $\mathrm{Ext}^1(\mathbb{Z}, \mathcal{Z}_\zeta)$}
+\subsection{4.1 Construction of the Ext Layer \texorpdfstring{$\mathrm{Ext}^1(\mathbb{Z}, \mathcal{Z}_\zeta)$}{Ext¹(Z, Zeta)}}
+
 
 We now shift our focus from topological persistence to algebraic obstruction theory.  
 In particular, we construct an extension layer over the moduli space $\mathcal{M}_\zeta$ using the Ext functor.
@@ -611,7 +637,6 @@ Then, there exists a functorially constructed moduli space $\mathcal{M}_{\mathca
 \[
 \mathrm{PH}_1(\mathcal{M}_{\mathcal{L}}) = 0 \quad \Rightarrow \quad \mathrm{Ext}^1(\mathbb{Z}, \mathcal{Z}_{\mathcal{L}}) = 0 \quad \Rightarrow \quad \Sha(\mathcal{L}) = 0.
 \]
-
 Consequently, all non-trivial zeros of $\mathcal{L}(s, \pi)$ are confined to the critical line $\Re(s) = \tfrac{1}{2}$.
 \end{conjecture}
 
@@ -669,6 +694,7 @@ In the following Appendices, we provide foundational details, diagrammatic evide
 
 
 \appendix
+
 \section*{Appendix A: AK Collapse Axioms and Functorial Structures}
 
 This appendix formalizes the foundational axioms of the AK Collapse Theory v10.0,  
@@ -715,19 +741,19 @@ We postulate the following ten axioms (A0–A9), governing the behavior of colla
     \]
 
     \item \textbf{A5 (Causal Collapse Coherence):} For all morphisms $f: X \rightarrow Y$ in $\mathcal{C}$, the following diagram commutes:
-　　\begin{center}
-　　\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
- 　　 \matrix (m) [matrix of math nodes, row sep=4em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
- 　　 {
- 　　   X & \mathcal{T}(X) \\
- 　　   Y & \mathcal{T}(Y) \\
-　　  };
-　　  \path[->] (m-1-1) edge node[above] {$\tau_X$} (m-1-2);
-　　  \path[->] (m-1-1) edge node[left]  {$f$} (m-2-1);
-　　  \path[->] (m-1-2) edge node[right] {$\mathcal{T}(f)$} (m-2-2);
-　　  \path[->] (m-2-1) edge node[below] {$\tau_Y$} (m-2-2);
-　　\end{tikzpicture}
-　　\end{center}
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=4em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
+  {
+    X & \mathcal{T}(X) \\
+    Y & \mathcal{T}(Y) \\
+  };
+  \path[->] (m-1-1) edge node[above] {$\tau_X$} (m-1-2);
+  \path[->] (m-1-1) edge node[left]  {$f$} (m-2-1);
+  \path[->] (m-1-2) edge node[right] {$\mathcal{T}(f)$} (m-2-2);
+  \path[->] (m-2-1) edge node[below] {$\tau_Y$} (m-2-2);
+\end{tikzpicture}
+\end{center}
 
 
     \item \textbf{A6 (Directional Constraint):} The collapse functor $\mathcal{T}$ is time-oriented and irreversible;  
@@ -1020,19 +1046,20 @@ called the \emph{collapse morphism}, satisfying the following:
 \begin{itemize}
     \item (Functoriality) For every morphism $f : X \to Y$, the diagram commutes:
     
-　　\begin{center}
-　　\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
-　　  \matrix (m) [matrix of math nodes, row sep=4em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
-　　  {
-　　    X & \mathcal{T}(X) \\
-　　    Y & \mathcal{T}(Y) \\
-　　  };
-　　  \path[->] (m-1-1) edge node[above] {$\tau_X$} (m-1-2);
-　　  \path[->] (m-1-1) edge node[left]  {$f$} (m-2-1);
-　　  \path[->] (m-1-2) edge node[right] {$\mathcal{T}(f)$} (m-2-2);
-　　  \path[->] (m-2-1) edge node[below] {$\tau_Y$} (m-2-2);
-　　\end{tikzpicture}
-　　\end{center}
+\begin{center}
+\begin{tikzpicture}[>=latex, baseline=(current bounding box.center)]
+  \matrix (m) [matrix of math nodes, row sep=4em, column sep=4.5em, text height=1.5ex, text depth=0.25ex]
+  {
+    X & \mathcal{T}(X) \\
+    Y & \mathcal{T}(Y) \\
+  };
+  \path[->] (m-1-1) edge node[above] {$\tau_X$} (m-1-2);
+  \path[->] (m-1-1) edge node[left]  {$f$} (m-2-1);
+  \path[->] (m-1-2) edge node[right] {$\mathcal{T}(f)$} (m-2-2);
+  \path[->] (m-2-1) edge node[below] {$\tau_Y$} (m-2-2);
+\end{tikzpicture}
+\end{center}
+
 
     \item (Fixed-point collapse) $\mathcal{T}(\mathcal{T}(X)) \cong \mathcal{T}(X)$
     \item (Irreversibility) There does not exist a natural inverse functor $\mathcal{T}^{-1}$.
@@ -1675,19 +1702,19 @@ There exists no morphism or collapse-compatible structure supporting a zero off 
 
 \subsection*{Q.4 Formal QED under Collapse Axioms}
 
-\begin{definition}[Q.E.D. under Collapse]
-We define:
 \[
 \boxed{
-\texttt{Q.E.D.}_{\text{Collapse}} := \left[
+\text{QED}_{\text{Collapse}} :=
+\left\{
 \begin{array}{l}
 \text{Axioms A0--A9 hold for all structural levels of } \mathcal{M}_\zeta, \\
 \text{All structural and functorial collapse morphisms converge to } \mathcal{L}_c, \\
-\text{There exist no residual homological, extensional, or global obstructions.}
+\text{No residual homological, extensional, or global obstructions exist.}
 \end{array}
-\right]
+\right.
+}
 \]
-\end{definition}
+
 
 \begin{center}
 \Huge
@@ -1864,7 +1891,7 @@ Axiom collapse_functoriality :
 
 \subsection*{S.4 Theorem Statement and Collapse QED}
 
-\begin{lstlisting}[caption={Main Theorem}]
+\begin{lstlisting}[caption={Collapse RH QED Theorem}]
 Theorem collapse_rh_qed :
   PH1 Mz = False ->
   Ext1 Zz = False ->
@@ -1877,6 +1904,7 @@ Proof.
 Qed.
 \end{lstlisting}
 
+
 \begin{center}
 \Huge
 \textbf{Q.E.D. \quad (Formally Verified in Coq)}
@@ -1887,8 +1915,9 @@ Qed.
 \begin{itemize}
     \item The Coq encoding reflects a minimal but complete internalization of the Collapse axioms.
     \item Each morphism (PH₁, Ext¹, Sha) is represented as a logical predicate; their vanishing is tracked via hypothesis assumptions.
-    \item The theorem `collapse_rh_qed` expresses that once all structural obstructions vanish, the terminal collapse object is the critical line $\mathcal{L}_c$.
+    \\item The theorem \texttt{collapse\_rh\_qed}` expresses that once all structural obstructions vanish, the terminal collapse object is the critical line $\mathcal{L}_c$.
     \item This formalization serves as a basis for further mechanized extensions to generalized $\mathcal{L}$-functions or BSD-related structures.
 \end{itemize}
+
 
 \end{document}
