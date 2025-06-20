@@ -1,46 +1,42 @@
-# 📉 The Collapse Riemann Theorem (v1.0)
-### Structural Proof of the Riemann Hypothesis  
-#### via Collapse Theory and AK High-Dimensional Projection
+# 📉 Collapse Riemann 定理（v1.0）
+### Collapse理論とAK高次元射影構造によるリーマン予想の構造的証明
 
-This repository presents **Version 1.0** of a formal, categorical, and type-theoretic resolution of the **Riemann Hypothesis (RH)**, formulated through **Collapse Theory** and the **AK High-Dimensional Projection Structural Framework (AK-HDPST)**.
+本リポジトリは、**リーマン予想（Riemann Hypothesis, RH）**に対する形式的・圏論的・型理論的な解決を提示するものであり、  
+**Collapse理論**および**AK高次元射影構造理論（AK-HDPST）**に基づいています。
 
-> 📄 Files:  
-> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v1.0.tex` — LaTeX source  
-> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v1.0.pdf` — compiled full proof
-
----
-
-## 🎯 Problem Statement
-
-Let ζ(s) be the Riemann zeta function.  
-The **Riemann Hypothesis** asserts that:
-
-**All non-trivial zeros of ζ(s) lie on the critical line Re(s) = 1/2**
-
-This project constructs a formal proof via **Collapse Chains** and **moduli-space-level Ext vanishing**, inspired by categorical reductions and topological triviality.
+> 📄 含まれるファイル:  
+> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v1.0.tex` — LaTeXソース  
+> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v1.0.pdf` — 完成済みの証明論文（英語）
 
 ---
 
-## 🧠 Proof Strategy: Collapse Chain
+## 🎯 問題設定
 
-We define the collapse sequence:
+ζ(s) をリーマンゼータ関数とする。  
+リーマン予想は次のように述べられます：
 
-**PH₁(𝓜_ζ) = 0 ⇒ Ext¹(ℤ, 𝓩_ζ) = 0 ⇒ Sha(ζ) = 0 ⇒ Re(s) = 1/2**
+**ζ(s) の非自明な零点はすべて Re(s) = 1/2 上にある。**
 
-Where:
-
-- **PH₁(𝓜_ζ)**: persistent homology vanishing over the zeta moduli
-- **Ext¹**: obstruction class vanishes (cohomological collapse)
-- **Sha(ζ)**: global obstructions disappear
-- **𝓛_c**: the terminal critical line space, Re(s) = 1/2
+本プロジェクトでは、この命題を**Collapse構造とExt消滅の鎖論理**を通じて、形式的に証明します。
 
 ---
 
-## 🔧 Collapse Structure Summary
+## 🧠 Collapse 証明戦略
 
-The layered collapse structure is:
+以下のような因果鎖（Collapse Chain）を構成します：
 
-# A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory
+**PH₁(𝓜_ζ) = 0 → Ext¹(ℤ, 𝓩_ζ) = 0 → Sha(ζ) = 0 → Re(s) = 1/2**
+
+- PH₁(𝓜_ζ): ゼータ関数モジュライ空間上の persistent homology が自明であること  
+- Ext¹: 障害類（obstruction class）の消滅  
+- Sha(ζ): 大域的障害の消滅（自己拡張の不存在）  
+- 𝓛_c: 終対象（collapse空間）である臨界直線 Re(s) = 1/2 への収束
+
+---
+
+## 🔧 Collapse 構造の要約
+
+Collapse連鎖の階層は次のように表されます：
 
 PH₁(𝓜_ζ) = 0
 ↓
@@ -51,103 +47,103 @@ Sha(ζ) = 0
 𝓛_c = {s ∈ ℂ | Re(s) = 1/2}
 
 
-Each arrow is functorial and governed by axioms A0–A9.
+各段階は Collapse公理群（A0〜A9）と関手構造により整合的に接続されています。
 
 ---
 
-## 📚 Proof Outline (Chapters 1–7)
+## 📚 論文構成（Chapter 1〜7）
 
-| Chapter | Title | Summary |
-|--------:|-------|---------|
-| 1 | Riemann Hypothesis Overview | Classical statement and background |
-| 2 | Collapse Strategy | AK-theoretic program toward proof |
-| 3 | PH₁ Collapse | Homological triviality of zeta moduli |
-| 4 | Ext Vanishing | Ext-layer analysis and elimination |
-| 5 | Sha Obstruction Collapse | Elimination of global obstructions |
-| 6 | QED | Formal collapse identity to critical line |
-| 7 | L-Function Extension | Generalization to ζ(s, π), Langlands motives |
-
----
-
-## 📑 Appendices (A–S)
-
-| Appendix | Title | Content |
-|---------:|-------|---------|
-| A | Collapse Chain Comparison | BSD vs RH Collapse structures |
-| B | Projection of Zeta Moduli | Embedding 𝓜_ζ ⊂ ℝⁿ |
-| C | PH₁ Collapse Topology | Barcode logic and homology vanishing |
-| D | Ext Collapse Analysis | Layered cohomological reduction |
-| E | Global Obstruction Logic | Sha(ζ) collapse in categorical terms |
-| F | Collapse Terminality | 𝓛_c as end object in collapse system |
-| G | ZFC Consistency | Collapse under formal logic axioms |
-| H | Collapse Diagrams | Visual chain: PH₁ → Ext → Sha → 𝓛_c |
-| I | AK Structural Summary | Collapse mapping via AK theory |
-| J | ζ(s) vs ℓ-adic Collapse | Comparison of ζ and L(E,s) structures |
-| Q | Collapse QED Summary | Formal statement of resolved identity |
-| R | Gallery + Index | All diagrams, terms, concept index |
-| S | Coq Formalization | Machine-level structure (Collapse + RH) |
+| Chapter | タイトル | 概要 |
+|--------:|----------|------|
+| 1 | リーマン予想の概観 | 古典的定式化と歴史的背景 |
+| 2 | Collapse戦略 | AK理論による全体戦略の定義 |
+| 3 | PH₁の消滅 | トポロジー的障害（persistent bar）の消去 |
+| 4 | Ext消滅層の構成 | Cohomology階層の消去証明 |
+| 5 | Sha層のCollapse | 大域的障害の除去と終対象への写像 |
+| 6 | QED（証明完了） | Collapse完了と Re(s)=1/2 の宣言 |
+| 7 | L関数一般化 | ζ(s, π) などLanglands動機への拡張 |
 
 ---
 
-## ✅ Completion Status
+## 📑 付録（A〜S）
 
-This version completes a formal resolution of RH under:
-
-- Collapse axioms (A0–A9)  
-- Ext-layer vanishing  
-- Topological + categorical obstruction removal  
-- Final mapping to Re(s) = 1/2
-
-Thus, formally:
-
-**If PH₁(𝓜_ζ) = 0, then Re(s) = 1/2 for all non-trivial zeros of ζ(s).**
-
----
-
-## 🔭 Future Directions
-
-- Extending to generalized L-functions: ζ(s, π)  
-- Collapse-motivic interpretation of Langlands functoriality  
-- Type-theoretic encoding in Coq/Lean  
-- Collapse generalization to functional zeta frameworks
+| Appendix | タイトル | 内容 |
+|---------:|----------|------|
+| A | BSDとの比較 | Collapse構造の相同性を比較 |
+| B | モジュライの射影 | 𝓜_ζ ⊂ ℝⁿ の幾何的埋め込み |
+| C | トポロジー構造 | ホモロジーの崩壊とバーコード論理 |
+| D | Ext層の解析 | Ext¹消滅に至る構造的解釈 |
+| E | 大域障害のCollapse | Sha(ζ) の消滅論理 |
+| F | 終対象性の導出 | Collapse空間の完結性証明 |
+| G | ZFC整合性 | Collapse理論の論理的一貫性 |
+| H | Collapse図式群 | 図示された Collapse連鎖と構造 |
+| I | AK理論要約 | Collapse構造のAK理論的構成要素 |
+| J | ζ関数とL関数 | ζ(s) vs L(E,s) のCollapse比較 |
+| Q | Collapse-QED | 形式的な証明完了の宣言とまとめ |
+| R | 図ギャラリー・索引 | Collapse用語・図・記号の一覧と索引 |
+| S | Coq定式化 | Collapse-RH構造の機械可読化スニペット |
 
 ---
 
-## 🧩 Related Theory: AK High-Dimensional Projection (AK-HDPST)
+## ✅ 証明完了条件
 
-This proof is grounded in:
+本バージョンは以下を満たす構造的証明を完結させています：
+
+- Collapse公理 A0〜A9 の満足  
+- persistent homology の消滅  
+- Ext 障害層の完全除去  
+- Re(s)=1/2 への Collapse写像の構成
+
+したがって：
+
+**PH₁(𝓜_ζ) = 0 ならば、ζ(s) の非自明な零点はすべて Re(s) = 1/2 上にある。**
+
+---
+
+## 🔭 将来的拡張
+
+- L関数（ζ(s, π)）や Langlands 動機への拡張  
+- Collapse-Langlands 関手写像の構築  
+- Coq や Lean による証明の完全型理論化  
+- BSD予想・ABC予想との Collapse統一構造の構築
+
+---
+
+## 🧩 関連理論：AK 高次元射影構造理論（AK-HDPST）
+
+本証明は以下の基礎理論に基づいています：
 
 **AK High-Dimensional Projection Structural Theory**  
-→ [AK-HDPST GitHub Repository](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+→ [AK-HDPST GitHubリポジトリ](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
 
-The theory provides:
+この理論は以下を提供します：
 
-- Collapse maps from homological to Ext layers  
-- ZFC + type-theoretic compatibility  
-- Functorial control of obstruction chains  
-- Platform for Navier–Stokes, BSD, RH, Langlands
+- persistent homology から Ext¹ 層への Collapse連鎖  
+- ZFC・型理論との整合性  
+- 関手的な障害除去メカニズム  
+- Navier–Stokes, BSD, RH, Langlands問題への応用性
 
 ---
 
-## 📩 Contact
+## 📩 お問い合わせ
 
-For collaboration or inquiry, especially in:
+以下の分野の方々との連携・議論を歓迎します：
 
-- Analytic number theory  
-- Persistent homology / cohomology  
-- Formal proof systems (Coq / Lean)  
-- Category theory and topological dynamics  
+- 解析的整数論 / 動機的L関数  
+- トポロジカルデータ解析  
+- Coq / Lean など形式証明系  
+- 圏論的構造論・ホモロジー代数
 
 📧 [dollops2501@icloud.com](mailto:dollops2501@icloud.com)
 
 ---
 
-## 🌐 Japanese Version
+## 🌐 English Version
 
-👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/Structural-Proof-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/README_jp.md)
+👉 [English version here (README.md)](https://github.com/Kobayashi2501/Structural-Proof-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/README.md)
 
 ---
 
-## 📘 License
+## 📘 ライセンス
 
-[MIT License](https://opensource.org/licenses/MIT)
+[MITライセンス](https://opensource.org/licenses/MIT)
