@@ -144,7 +144,7 @@ For collaboration or inquiry, especially in:
 
 ## 🌐 Japanese Version
 
-👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/Structural-Proof-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/README_jp.md)
+👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/README_jp.md)
 
 ---
 
