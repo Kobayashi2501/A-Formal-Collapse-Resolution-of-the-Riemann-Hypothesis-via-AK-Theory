@@ -140,7 +140,7 @@ Sha(ζ) = 0
 
 ## 🌐 English Version
 
-👉 [English version here (README.md)](https://github.com/Kobayashi2501/Structural-Proof-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/README.md)
+👉 [English version here (README.md)](https://github.com/Kobayashi2501/A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/README.md)
 
 ---
 
