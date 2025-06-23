@@ -109,6 +109,14 @@ Sha(ζ) = 0
 
 ---
 
+## DOI
+
+このプロジェクトはZenodoに正式にアーカイブされています：
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15713905.svg)](https://doi.org/10.5281/zenodo.15713905)
+
+---
+
 ## 🧩 関連理論：AK 高次元射影構造理論（AK-HDPST）
 
 本証明は以下の基礎理論に基づいています：
