@@ -113,6 +113,14 @@ Thus, formally:
 
 ---
 
+## DOI
+
+This project has been formally archived on Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15713905.svg)](https://doi.org/10.5281/zenodo.15713905)
+
+---
+
 ## 🧩 Related Theory: AK High-Dimensional Projection (AK-HDPST)
 
 This proof is grounded in:
