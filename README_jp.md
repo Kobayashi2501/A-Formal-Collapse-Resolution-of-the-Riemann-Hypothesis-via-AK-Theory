@@ -30,11 +30,13 @@ $\zeta(s)$をリーマンゼータ関数とします。
 
 ## 🧠 解決戦略：完全Collapse連鎖
 
-$\zeta(s)$に付随する構造層$\mathcal{F}_{\zeta}$に対し、以下のCollapse連鎖を構築します：
+ζ(s) に付随する構造層 F_ζ に対し、以下のCollapse連鎖を構築します：
 
-$$
-\mathrm{PH}_1(\mathcal{F}_{\zeta}) = 0 \implies \mathrm{Ext}^1(\mathcal{F}_{\zeta}, -) = 0 \implies \mathrm{GroupCollapse}(\mathcal{F}_{\zeta}) \implies \text{RH成立}
-$$
+PH₁(F_ζ) = 0  
+⇒ Ext¹(F_ζ, -) = 0  
+⇒ GroupCollapse(F_ζ)  
+⇒ RH成立
+
 
 この連鎖は型理論的に形式化され、機械レベルで検証可能です。
 
