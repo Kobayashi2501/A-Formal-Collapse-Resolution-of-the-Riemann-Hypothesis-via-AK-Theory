@@ -31,11 +31,12 @@ These mechanisms are governed by the AK-HDPST v12.0 framework, ensuring logical 
 
 ## 🧠 Resolution Strategy: Total Collapse Chain
 
-We establish the following collapse sequence for the structural sheaf $\mathcal{F}_{\zeta}$ associated with $\zeta(s)$:
+We establish the following collapse sequence for the structural sheaf F_ζ associated with ζ(s):
 
-$$
-\mathrm{PH}_1(\mathcal{F}_{\zeta}) = 0 \implies \mathrm{Ext}^1(\mathcal{F}_{\zeta}, -) = 0 \implies \mathrm{GroupCollapse}(\mathcal{F}_{\zeta}) \implies \text{Riemann Hypothesis holds.}
-$$
+PH₁(F_ζ) = 0  
+⇒ Ext¹(F_ζ, -) = 0  
+⇒ GroupCollapse(F_ζ)  
+⇒ Riemann Hypothesis holds
 
 This sequence is formalized in dependent type theory and verified through machine-level encoding.
 
