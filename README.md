@@ -124,8 +124,7 @@ Thus:
 
 This project has been formally archived on Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15713905.svg)](https://doi.org/10.5281/zenodo.15713905)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15795398.svg)](https://doi.org/10.5281/zenodo.15795398)
 ---
 
 ## 🧩 Related Theory: AK High-Dimensional Projection (AK-HDPST)
