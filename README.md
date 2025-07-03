@@ -1,38 +1,43 @@
-# 📉 The Collapse Riemann Theorem (v1.0)
-### Structural Proof of the Riemann Hypothesis  
+# 📉 The Collapse Riemann Theorem (v2.0)
+### Structural Resolution of the Riemann Hypothesis  
 #### via Collapse Theory and AK High-Dimensional Projection
 
-This repository presents **Version 1.0** of a formal, categorical, and type-theoretic resolution of the **Riemann Hypothesis (RH)**, formulated through **Collapse Theory** and the **AK High-Dimensional Projection Structural Framework (AK-HDPST)**.
+This repository presents **Version 2.0** of a formally complete, structurally integrated, and type-theoretically encoded resolution of the **Riemann Hypothesis (RH)**, formulated through **Collapse Theory** and the **AK High-Dimensional Projection Structural Framework (AK-HDPST v12.0)**.
 
 > 📄 Files:  
-> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v1.0.tex` — LaTeX source  
-> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v1.0.pdf` — compiled full proof
+> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v2.0.tex` — LaTeX source  
+> - `A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory_v2.0.pdf` — compiled full resolution  
 
 ---
 
 ## 🎯 Problem Statement
 
-Let ζ(s) be the Riemann zeta function.  
+Let $\zeta(s)$ be the Riemann zeta function.  
 The **Riemann Hypothesis** asserts that:
 
-**All non-trivial zeros of ζ(s) lie on the critical line Re(s) = 1/2**
+**All non-trivial zeros of $\zeta(s)$ lie on the critical line $\Re(s) = \tfrac{1}{2}$.**
 
-This project constructs a formal proof via **Collapse Chains** and **moduli-space-level Ext vanishing**, inspired by categorical reductions and topological triviality.
+This project constructs a structural resolution via:
+
+- **Persistent Homology Collapse**  
+- **Ext-class Triviality**  
+- **Group Collapse**  
+- **Iwasawa-Theoretic Refinement**  
+- **Type-theoretic Formalization (Coq/Lean)**  
+
+These mechanisms are governed by the AK-HDPST v12.0 framework, ensuring logical completeness and machine-verifiable encoding.
 
 ---
 
-## 🧠 Proof Strategy: Collapse Chain
+## 🧠 Resolution Strategy: Total Collapse Chain
 
-We define the collapse sequence:
+We establish the following collapse sequence for the structural sheaf $\mathcal{F}_{\zeta}$ associated with $\zeta(s)$:
 
-**PH₁(𝓜_ζ) = 0 ⇒ Ext¹(ℤ, 𝓩_ζ) = 0 ⇒ Sha(ζ) = 0 ⇒ Re(s) = 1/2**
+$$
+\mathrm{PH}_1(\mathcal{F}_{\zeta}) = 0 \implies \mathrm{Ext}^1(\mathcal{F}_{\zeta}, -) = 0 \implies \mathrm{GroupCollapse}(\mathcal{F}_{\zeta}) \implies \text{Riemann Hypothesis holds.}
+$$
 
-Where:
-
-- **PH₁(𝓜_ζ)**: persistent homology vanishing over the zeta moduli
-- **Ext¹**: obstruction class vanishes (cohomological collapse)
-- **Sha(ζ)**: global obstructions disappear
-- **𝓛_c**: the terminal critical line space, Re(s) = 1/2
+This sequence is formalized in dependent type theory and verified through machine-level encoding.
 
 ---
 
@@ -40,76 +45,77 @@ Where:
 
 The layered collapse structure is:
 
-# A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory
-
-PH₁(𝓜_ζ) = 0
+PH₁(𝓕_ζ) = 0
 ↓
-Ext¹(ℤ, 𝓩_ζ) = 0
+Ext¹(𝓕_ζ, -) = 0
 ↓
-Sha(ζ) = 0
+GroupCollapse(𝓕_ζ)
 ↓
-𝓛_c = {s ∈ ℂ | Re(s) = 1/2}
+All non-trivial zeros of ζ(s) lie on Re(s) = 1/2
 
 
-Each arrow is functorial and governed by axioms A0–A9.
+Each implication is governed by formally stated Collapse Axioms (A1–A9) and functorial mechanisms within AK-HDPST.
 
 ---
 
-## 📚 Proof Outline (Chapters 1–7)
+## 📚 Resolution Outline (Chapters 1–8)
 
 | Chapter | Title | Summary |
 |--------:|-------|---------|
-| 1 | Riemann Hypothesis Overview | Classical statement and background |
-| 2 | Collapse Strategy | AK-theoretic program toward proof |
-| 3 | PH₁ Collapse | Homological triviality of zeta moduli |
-| 4 | Ext Vanishing | Ext-layer analysis and elimination |
-| 5 | Sha Obstruction Collapse | Elimination of global obstructions |
-| 6 | QED | Formal collapse identity to critical line |
-| 7 | L-Function Extension | Generalization to ζ(s, π), Langlands motives |
+| 1 | Introduction and Motivation | RH statement, structural reformulation, roadmap |
+| 2 | AK-HDPST Foundations | High-dimensional projection and structural collapse |
+| 3 | Persistent Homology Collapse | Topological obstruction elimination for $\zeta(s)$ |
+| 4 | Ext-Class Triviality | Categorical collapse and Ext$^1$ vanishing |
+| 5 | Group-Theoretic Collapse | Galois, fundamental group simplification |
+| 6 | Iwasawa-Theoretic Refinement | Collapse enhancement via class group structure |
+| 7 | Type-Theoretic and Coq/Lean Formalization | Machine-verifiable encoding of collapse conditions |
+| 8 | Global Collapse Synthesis and RH Resolution | Final logical closure and explicit critical line confinement |
 
 ---
 
-## 📑 Appendices (A–S)
+## 📑 Appendices (A–L')
 
 | Appendix | Title | Content |
 |---------:|-------|---------|
-| A | Collapse Chain Comparison | BSD vs RH Collapse structures |
-| B | Projection of Zeta Moduli | Embedding 𝓜_ζ ⊂ ℝⁿ |
-| C | PH₁ Collapse Topology | Barcode logic and homology vanishing |
-| D | Ext Collapse Analysis | Layered cohomological reduction |
-| E | Global Obstruction Logic | Sha(ζ) collapse in categorical terms |
-| F | Collapse Terminality | 𝓛_c as end object in collapse system |
-| G | ZFC Consistency | Collapse under formal logic axioms |
-| H | Collapse Diagrams | Visual chain: PH₁ → Ext → Sha → 𝓛_c |
-| I | AK Structural Summary | Collapse mapping via AK theory |
-| J | ζ(s) vs ℓ-adic Collapse | Comparison of ζ and L(E,s) structures |
-| Q | Collapse QED Summary | Formal statement of resolved identity |
-| R | Gallery + Index | All diagrams, terms, concept index |
-| S | Coq Formalization | Machine-level structure (Collapse + RH) |
+| A | Complete Collapse Axioms | Formal axioms (PH₁, Ext¹, Group Collapse, etc.) |
+| B | Persistent Homology Details | Structural encoding and PH₁ collapse conditions |
+| C | Ext-Group Triviality Proofs | Categorical simplification mechanisms |
+| D | Iwasawa-Theoretic Collapse | Arithmetic-level refinement and class number effects |
+| E | Langlands Collapse | Reformulation of Langlands correspondence via collapse |
+| F | Mirror–Tropical Degeneration | Geometric perspective on structural collapse |
+| G | Controlled Motif Integration | Cautious exploration of motif-category connections |
+| H | Classical vs. Collapse Approaches | Comparative structural advantages |
+| I | Terminology and Notation Glossary | Comprehensive definitions and notations |
+| J | Diagrammatic Collapse Gallery | Visual representation of collapse structures |
+| K | Coq/Lean Formalization | Machine-verifiable type-theoretic encoding |
+| L | Explicit RH Collapse Criteria | Verifiable conditions and conceptual examples |
+| L' | Theoretical Model-Based Collapse Examples | Literature-supported, simulation-free reinforcement |
 
 ---
 
 ## ✅ Completion Status
 
-This version completes a formal resolution of RH under:
+Version 2.0 provides a logically complete, structurally reinforced, and machine-verifiable resolution of RH under:
 
-- Collapse axioms (A0–A9)  
-- Ext-layer vanishing  
-- Topological + categorical obstruction removal  
-- Final mapping to Re(s) = 1/2
+- Formal Collapse Axioms (A1–A9)  
+- Topological, categorical, group-theoretic, and arithmetic collapse  
+- Iwasawa-theoretic refinement  
+- Type-theoretic encoding compatible with Coq/Lean  
+- Practical example support via Appendices L and L'  
 
-Thus, formally:
+Thus:
 
-**If PH₁(𝓜_ζ) = 0, then Re(s) = 1/2 for all non-trivial zeros of ζ(s).**
+**If total structural collapse holds for $\mathcal{F}_{\zeta}$, then all non-trivial zeros of $\zeta(s)$ lie on $\Re(s) = \tfrac{1}{2}$.**
 
 ---
 
 ## 🔭 Future Directions
 
-- Extending to generalized L-functions: ζ(s, π)  
-- Collapse-motivic interpretation of Langlands functoriality  
-- Type-theoretic encoding in Coq/Lean  
-- Collapse generalization to functional zeta frameworks
+- Extending collapse mechanisms to $L$-functions and generalized zeta functions  
+- Integration with Langlands program via structural collapse  
+- Collapse-motivic interpretation for motives and derived categories  
+- Formal proof system generalization beyond RH  
+- Numerical and geometric validation of collapse conditions  
 
 ---
 
@@ -123,17 +129,17 @@ This project has been formally archived on Zenodo:
 
 ## 🧩 Related Theory: AK High-Dimensional Projection (AK-HDPST)
 
-This proof is grounded in:
+This resolution is grounded in:
 
-**AK High-Dimensional Projection Structural Theory**  
+**AK High-Dimensional Projection Structural Theory (v12.0)**  
 → [AK-HDPST GitHub Repository](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
 
-The theory provides:
+AK-HDPST provides:
 
-- Collapse maps from homological to Ext layers  
-- ZFC + type-theoretic compatibility  
-- Functorial control of obstruction chains  
-- Platform for Navier–Stokes, BSD, RH, Langlands
+- Formal collapse mechanisms across mathematical domains  
+- Type-theoretic encoding and ZFC compatibility  
+- Functorial control of persistent obstructions  
+- Unified structural perspective for RH, BSD, Navier–Stokes, Langlands  
 
 ---
 
@@ -142,9 +148,9 @@ The theory provides:
 For collaboration or inquiry, especially in:
 
 - Analytic number theory  
-- Persistent homology / cohomology  
-- Formal proof systems (Coq / Lean)  
-- Category theory and topological dynamics  
+- Homological and categorical obstruction theory  
+- Formal proof assistants (Coq / Lean)  
+- Structural mathematics and functorial collapse  
 
 📧 [dollops2501@icloud.com](mailto:dollops2501@icloud.com)
 
