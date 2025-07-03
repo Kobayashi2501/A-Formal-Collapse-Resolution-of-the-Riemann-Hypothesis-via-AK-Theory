@@ -124,8 +124,7 @@ GroupCollapse(𝓕_ζ)
 
 本プロジェクトはZenodoにアーカイブ済です：
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15713905.svg)](https://doi.org/10.5281/zenodo.15713905)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15795398.svg)](https://doi.org/10.5281/zenodo.15795398)
 ---
 
 ## 🧩 関連理論：AK高次元射影構造理論（AK-HDPST）
