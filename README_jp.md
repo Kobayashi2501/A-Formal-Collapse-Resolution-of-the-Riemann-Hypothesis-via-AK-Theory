@@ -148,7 +148,7 @@ $\mathcal{F}_{\zeta}$ に対して Collapse が完全に成立した時、
 
 本プロジェクトはZenodoにて正式にアーカイブされています：
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15795398.svg)](https://doi.org/10.5281/zenodo.15795398)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15868732.svg)](https://doi.org/10.5281/zenodo.15868732)
 
 ---
 
