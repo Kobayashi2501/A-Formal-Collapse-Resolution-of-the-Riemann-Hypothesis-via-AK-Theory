@@ -147,7 +147,7 @@ Therefore, RH holds as a consequence of the functorial collapse process.
 
 This project has been formally archived on Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15795398.svg)](https://doi.org/10.5281/zenodo.15795398)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15868732.svg)](https://doi.org/10.5281/zenodo.15868732)
 
 ---
 
