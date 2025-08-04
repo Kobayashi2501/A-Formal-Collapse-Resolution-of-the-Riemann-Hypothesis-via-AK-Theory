@@ -170,7 +170,7 @@ For collaboration, formal verification, or citation inquiries.
 
 ## 📌 DOI
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16524359.svg)](https://doi.org/10.5281/zenodo.16524359)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16736911.svg)](https://doi.org/10.5281/zenodo.16736911)
 
 This archive is fully structured, verifiable, and publicly distributed.  
 It constitutes the **first known structural proof of RH under type-theoretic collapse**.
