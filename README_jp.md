@@ -175,7 +175,7 @@ MIT License（学術用途・共同研究歓迎）
 
 ## 📌 DOI
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16524359.svg)](https://doi.org/10.5281/zenodo.16524359)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16736911.svg)](https://doi.org/10.5281/zenodo.16736911)
 
 本アーカイブは形式的・視覚的・理論的に検証可能な、  
 **史上初のCollapse型リーマン予想証明体系**です。
