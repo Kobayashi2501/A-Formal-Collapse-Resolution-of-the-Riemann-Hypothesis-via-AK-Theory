@@ -100,8 +100,6 @@ then no structural degree of freedom permits deviation from $\Re(s) = 1/2$.
 
 ## 📚 Appendices A–Z Summary
 
-See [Appendix Summary](https://github.com/Kobayashi2501/A-Formal-Collapse-Resolution-of-the-Riemann-Hypothesis-via-AK-Theory/blob/main/Appendix_Summary.md) for full details.
-
 - A–H: Collapse predicates, energy decay, equivalences  
 - I–M′: Iwasawa collapse, cone geometry, failure spectrum  
 - N–Z: BSD inverse, RH cone, full Coq formalization  
